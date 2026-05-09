@@ -1,0 +1,13 @@
+Android Secure Toolkit
+Copyright (c) 2026 visiongem
+
+Licensed under the Apache License, Version 2.0.
+
+This product is independent original work, based on:
+- Android platform public APIs (Keystore, BiometricPrompt, FLAG_SECURE)
+- Public standards (NIST SP 800-38D)
+- Public documentation (Android Developers, AOSP)
+- The author's general engineering experience
+
+No proprietary code, SDK, protocol, or business logic from any third party
+has been included.
