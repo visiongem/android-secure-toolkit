@@ -21,6 +21,31 @@ Android 平台层的安全 API（`Keystore`、`BiometricPrompt`、`FLAG_SECURE`�
 | `:biometricvault` | 指纹保护任意 AES key，自动失效防换指纹绕过 | `BiometricVault.obtainEncryptCipher(ctx, alias)` |
 | `:screensecure` | Compose 一行代码加 `FLAG_SECURE` 防截屏 | `ScreenshotProtector()` |
 
+## 真机验证
+
+> **Verified on**: OnePlus 9 / OxygenOS / Android 14 — 三模块全部跑通。
+
+<table>
+<tr>
+<td width="50%">
+
+**Sample 主页（SecureStore + BiometricVault 加解密往返成功）**
+
+<img src="docs/blog/screenshots/sample-overview.png" alt="sample app 主页：明文/密文/解密链路全部工作" width="100%">
+
+</td>
+<td width="50%">
+
+**ScreenshotProtector 生效（系统拦截截屏）**
+
+<img src="docs/blog/screenshots/flag-secure-blocked.jpg" alt="OxygenOS 系统提示：由于该应用限制，涉及隐私/版权的界面不允许截屏" width="100%">
+
+</td>
+</tr>
+</table>
+
+> 第二张图是用另一台手机翻拍的——因为 `ScreenshotProtector` 一开，连截屏键都按不动了。系统 toast 中文文案是 OxygenOS 风格（AOSP 标准是英文 `Can't take screenshot due to security policy`）。完整真机验证步骤见 [docs/RUNNING_SAMPLE.md](docs/RUNNING_SAMPLE.md)。
+
 ## 快速开始
 
 ```kotlin

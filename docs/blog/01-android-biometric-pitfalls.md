@@ -186,6 +186,14 @@ StrongBox 仅 Pixel 3+ / 三星 S 系列等高端机有。降级到普通 TEE **
 
 ---
 
+**实际效果**（OnePlus 9 / OxygenOS / Android 14 上的截图）：
+
+![FLAG_SECURE 拦截截屏](screenshots/flag-secure-blocked.jpg)
+
+系统直接弹出 toast「由于该应用限制，涉及隐私/版权的界面不允许截屏」，连用户主动截屏都拦下了。这就是 `FLAG_SECURE` 在最普通用户场景下的真实效果。
+
+---
+
 ## 坑 8：Compose Dialog / BottomSheet 不继承 FLAG_SECURE
 
 加密数据解密成功后展示在 Dialog 里——结果用户能截屏。原因：Dialog 是独立 Window。

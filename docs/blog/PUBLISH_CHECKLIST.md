@@ -15,12 +15,12 @@
 
 需要 **2 张关键截图**，建议尺寸 1080×2400（手机原生分辨率）：
 
-- [ ] **截图 1：BiometricPrompt 弹窗**
+- [ ] **截图 1：BiometricPrompt 弹窗**（可选——很多设备 BiometricPrompt 自带 FLAG_SECURE 截不到，这恰是它安全的体现，可文中说明）
   来源：跑 sample → 点 "Biometric Encrypt" → 弹窗出现时按 **Volume Down + Power** 截屏
   在文章："坑 5" 段最适合放这张图
-- [ ] **截图 2：FLAG_SECURE 拦截截屏的系统提示**
-  来源：sample → ScreenshotProtector 开启 → 按截屏组合键 → 截下"无法截图"那个系统 toast
-  在文章："坑 8" 段插入
+- [x] ~~**截图 2：FLAG_SECURE 拦截截屏的系统提示**~~ ✅ 已收录于 `screenshots/flag-secure-blocked.jpg`
+  来源：OnePlus 9 / OxygenOS / Android 14 实拍——sample → ScreenshotProtector 开启 → 截屏被系统拦截
+  位置：博客"坑 8"段已嵌入
 
 可选增强：
 
