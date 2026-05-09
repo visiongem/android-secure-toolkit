@@ -1,21 +1,31 @@
 # Android 生物识别集成的 8 个真实坑（含可直接套用的代码）
 
-> 一份给"已经会调 BiometricPrompt 但被各种边缘 case 折腾过"的工程师看的避坑笔记。
+> 一份给"已经会调 BiometricPrompt 但被边缘 case 反复折腾"的 Android 工程师看的避坑笔记 + 配套开源工具。
 
-<!-- 写作笔记：标题党级但不夸大；2000-3000 字；首图建议放一张"指纹弹窗 + 红叉"的截图 -->
+## 写在前面（先把诚实摆出来）
 
-## 引子（150 字）
+这篇文章不是"我亲历了所有这些坑"——而是把一个金融级 Android 项目里"用户敏感数据保护"相关的实践代码，借助 AI 协助梳理、脱敏、抽象后，整理成的开源小工具配套博客。
 
-凡是做过含敏感数据的 Android App，都绕不开 `BiometricPrompt + Cipher` 这套组合。官方文档和 codelab 给的 happy path 看起来很简单——直到你的用户：
+材料来源：
+
+- Android 平台公开 API 文档（Keystore、BiometricPrompt、FLAG_SECURE）
+- AOSP 源码与 [androidx.biometric](https://developer.android.com/jetpack/androidx/releases/biometric) 公开实现
+- [Trust Wallet Core](https://github.com/trustwallet/wallet-core) 等开源金融项目对相同问题的处理方式
+- NIST SP 800-38D 等公开密码学规范
+- 我自己一线开发中遇到的部分场景
+
+凡是做过含敏感数据的 Android App，都会绕不开 `BiometricPrompt + Cipher` + `FLAG_SECURE` 这套组合。官方文档分散、StackOverflow 答案普遍过时、AOSP 源码门槛高。三件加在一起，足以让团队为同一个问题反复走弯路。
+
+下面 8 个坑都是**真实存在的平台行为**——你的用户**一定会**触发它们：
 
 - 加了一个新指纹，App 第二天打不开了
 - 取消了屏幕锁，所有加密数据"消失"
 - 在指纹框上犹豫了 30 秒，回来 App 卡住
-- 在 Pixel 6 上跑得好好的，到三星某机型崩了
+- 在 Pixel 6 上跑得好好的，到某国产机型崩了
 
-下面 8 个坑，是从一个生产环境 App（涉及助记词级别敏感数据）的真实事故里抽出来的。每个坑都给你一段可直接抄走的代码。
+每个坑配一段**可直接抄走的代码**，加起来恰好是配套开源库 [android-secure-toolkit](https://github.com/visiongem/android-secure-toolkit) 三个模块的核心实现。三模块已经在 OnePlus 9 / OxygenOS / Android 14 上**真机验证**通过，10/10 instrumented test 在真实 AndroidKeyStore 上端到端绿。
 
-文末有一个开源库 [android-secure-toolkit](https://github.com/visiongem/android-secure-toolkit) 把这些坑都包了——不想看细节直接装库即可。
+不想看细节直接装库即可。想知道为什么每行代码这么写——往下读。
 
 ---
 
