@@ -23,7 +23,11 @@ Android 平台层的安全 API（`Keystore`、`BiometricPrompt`、`FLAG_SECURE`�
 
 ## 真机验证
 
-> **Verified on**: OnePlus 9 / OxygenOS / Android 14 — 三模块全部跑通。
+> **Verified on**: OnePlus 9 (LE2113) / OxygenOS / Android 14
+> **Instrumented tests**: `:securestore` 10/10 passing on real AndroidKeyStore
+
+![10/10 instrumented tests passing on OnePlus 9](docs/blog/screenshots/instrumented-test-pass.png)
+
 
 <table>
 <tr>

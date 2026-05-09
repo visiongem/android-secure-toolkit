@@ -136,8 +136,8 @@ moduleX/
 - [x] ~~`docs/blog/PUBLISH_CHECKLIST.md` 博客发布清单~~（2026-05-09）
 
 ### 进行中 / 待办
-- [ ] 真机验证 sample 三模块（按 `docs/RUNNING_SAMPLE.md` 跑一遍）
-- [ ] `securestore` 跑 `./gradlew :securestore:connectedDebugAndroidTest`（10 用例端到端）
+- [x] ~~真机验证 sample 三模块~~（2026-05-09，OnePlus 9 LE2113 / OxygenOS / Android 14）
+- [x] ~~`securestore` 跑 `connectedDebugAndroidTest`~~（2026-05-09，10/10 全绿）
 - [ ] 截两张关键截图（`docs/blog/PUBLISH_CHECKLIST.md` B 节）
 - [ ] 博客首发（掘金）
 - [ ] GitHub repo 启用 Discussions（在 Settings → Features）

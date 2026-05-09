@@ -11,7 +11,8 @@
 - ✅ `:screensecure` Compose `ScreenshotProtector` + Android 13+ 最近任务截图禁用
 - ✅ Sample app 演示三模块
 - ✅ 三模块完整使用文档（`docs/*.md`）
-- ✅ 真机验证（OnePlus 9 / OxygenOS / Android 14）
+- ✅ 真机验证（OnePlus 9 LE2113 / OxygenOS / Android 14，三模块全部 OK）
+- ✅ `:securestore` 端到端 instrumented test 10/10 在真 AndroidKeyStore 上通过
 - ✅ JitPack 发版 + GitHub Actions CI
 
 ## v0.2.0（开发中）
