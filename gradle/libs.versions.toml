@@ -1,6 +1,6 @@
 [versions]
 kotlin = "2.0.21"
-agp = "8.11.0"
+agp = "9.2.1"
 androidxCore = "1.16.0"
 androidxActivity = "1.10.1"
 androidxBiometric = "1.1.0"
