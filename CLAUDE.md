@@ -122,15 +122,27 @@ moduleX/
 
 ## 9. 已知 TODO（按优先级）
 
+### 已完成
 - [x] ~~`YOUR_GITHUB_USERNAME` 已替换为 `visiongem`~~（2026-05-09）
 - [x] ~~`LICENSE` / `NOTICE` 的 `[YOUR NAME]` 已设为 `visiongem`~~（如需用真名作版权署名可再改）
-- [ ] 配置 `local.properties` 的 `sdk.dir`（Android Studio 打开自动写入，命令行需手填）
-- [ ] 跑通 `./gradlew assembleDebug` 至少一次
-- [ ] sample 模块跑在真机上验证 BiometricVault（Robolectric 模拟有限）
-- [x] ~~补 `docs/` 目录三份详细使用文档~~（已完成 2026-05-08）
-- [x] ~~JitPack 发版配置~~（已完成 2026-05-08，见 `jitpack.yml` + 3 个库的 `publishing` 块）
-- [ ] 切换到 Maven Central（v0.2+ 时，需 gnupg、sonatype 账号）
-- [ ] 给三个模块各自补 `README.md`（一句话定位 + 三段示例）
+- [x] ~~`local.properties` 的 `sdk.dir` 已配~~（2026-05-08）
+- [x] ~~跑通 `./gradlew assembleDebug`~~（2026-05-08，sample + 3 库全部 BUILD SUCCESSFUL）
+- [x] ~~补 `docs/` 目录三份详细使用文档~~（2026-05-08）
+- [x] ~~JitPack 发版配置~~（2026-05-08，`jitpack.yml` + 3 库的 `publishing` 块）
+- [x] ~~git init + push v0.1.0 到 GitHub~~（2026-05-09，commit `101ad7c`）
+- [x] ~~v0.1.0 tag 推送 + 触发 JitPack 首次构建~~（2026-05-09）
+- [x] ~~README badges + GitHub URL + JitPack 安装段~~（2026-05-09）
+- [x] ~~`docs/RUNNING_SAMPLE.md` 真机验证指引~~（2026-05-09）
+- [x] ~~`docs/blog/PUBLISH_CHECKLIST.md` 博客发布清单~~（2026-05-09）
+
+### 进行中 / 待办
+- [ ] 真机验证 sample 三模块（按 `docs/RUNNING_SAMPLE.md` 跑一遍）
+- [ ] `securestore` 跑 `./gradlew :securestore:connectedDebugAndroidTest`（10 用例端到端）
+- [ ] 截两张关键截图（`docs/blog/PUBLISH_CHECKLIST.md` B 节）
+- [ ] 博客首发（掘金）
+- [ ] GitHub repo 启用 Discussions（在 Settings → Features）
+- [ ] 给三个模块各自补 `README.md`（一句话定位 + 三段示例）—— 优先级低
+- [ ] 切换到 Maven Central（v0.2+ 时，需 gnupg、sonatype 账号）—— 长期
 
 ## 10. 知识产权声明
 

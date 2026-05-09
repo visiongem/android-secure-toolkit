@@ -2,9 +2,14 @@
 
 > 一套面向"用户敏感数据保护"的 Android 库，全 Kotlin / 全 Compose / 零反射 / 零 DI 依赖。
 
+[![JitPack](https://jitpack.io/v/visiongem/android-secure-toolkit.svg)](https://jitpack.io/#visiongem/android-secure-toolkit)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.0.21-7F52FF?logo=kotlin)](https://kotlinlang.org/)
 [![minSdk](https://img.shields.io/badge/minSdk-24-3DDC84?logo=android)](https://developer.android.com/)
+[![CI](https://github.com/visiongem/android-secure-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/visiongem/android-secure-toolkit/actions)
+
+📦 **Maven 坐标**: `com.github.visiongem.android-secure-toolkit:<module>:0.1.0`
+🔗 **GitHub**: <https://github.com/visiongem/android-secure-toolkit>
 
 ## 为什么造这个轮子
 
