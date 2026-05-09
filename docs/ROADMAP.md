@@ -54,6 +54,15 @@
 - ❌ **DexGuard 集成**：商业产品，与开源定位冲突
 - ❌ **设备 root / 调试器检测**：超出本库威胁模型（见 [SECURITY.md](../SECURITY.md)）；推荐配合 SafetyNet / Play Integrity API
 
+## 关联仓库规划
+
+未来 1-2 个开源库的 idea backlog（启动条件 + 决策框架）见 [docs/FUTURE_REPOS.md](FUTURE_REPOS.md)。简要：
+
+- **`android-message-pipeline`** 候选（高优先级）：BLE/USB/串口的统一消息管道，解决"小通道传大消息"问题
+- **`android-kotlin-utils`** 候选（次优先级）：Compose-first 时代的扩展函数库，补 Splitties / Anko 留下的空白
+
+**不会做**的方向：多链签名 / 助记词管理 / KYC SDK / DexGuard 替代品（合规风险或竞争壁垒过高，个人开发者不应承担）。
+
 ## 反馈渠道
 
 - 功能请求：[GitHub Issues](https://github.com/visiongem/android-secure-toolkit/issues) 加 `enhancement` 标签
