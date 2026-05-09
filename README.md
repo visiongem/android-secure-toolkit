@@ -102,16 +102,11 @@ dependencies {
 
 > 把 `visiongem` 换成实际用户名。每个模块独立可装，不强制三个一起引。
 
-### Maven Central（计划中）
-
-待 0.2 版本后切换到 Maven Central 发布，届时坐标会简化为 `com.securetoolkit:xxx:版本`。
-
 ## 设计原则
 
 - **零强依赖**：库不引入 Hilt / Koin / RxJava；调用方按需自接 DI。
 - **失败即 null**：默认 API 不抛异常，避免上层全到处 try-catch。需要详细错误用 `xxxOrThrow`。
 - **不偷偷弱化**：`AES-256-GCM`、`12B IV`、`128bit GCM tag` 全部硬编码，不让调用方传弱配置。
-- **跟着 Android 平台走**：API 30+ 用 `setUserAuthenticationParameters`，API 28+ 用 StrongBox，API 33+ 关 `RecentsScreenshot`，老 API 自动降级。
 
 ## 模块详细文档
 
@@ -127,4 +122,4 @@ dependencies {
 
 ## License
 
-Apache 2.0 — 商用、修改、再发布皆可，保留 NOTICE 即可。详见 [LICENSE](LICENSE)。
+Apache 2.0，详见 [LICENSE](LICENSE)。
