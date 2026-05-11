@@ -1,15 +1,15 @@
 [versions]
 kotlin = "2.0.21"
 agp = "8.11.0"
-androidxCore = "1.16.0"
-androidxActivity = "1.10.1"
+androidxCore = "1.18.0"
+androidxActivity = "1.13.0"
 androidxBiometric = "1.1.0"
-androidxLifecycle = "2.9.0"
-androidxComposeBom = "2025.05.01"
+androidxLifecycle = "2.10.0"
+androidxComposeBom = "2026.05.00"
 junit = "4.13.2"
 robolectric = "4.13"
 androidxTestExt = "1.2.1"
-androidxTestRunner = "1.6.2"
+androidxTestRunner = "1.7.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
